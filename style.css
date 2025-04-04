@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    /*
+    consistent layout
+    */
+  }
+  
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  section {
+    width: 100vw;
+    height: 100vh;
+    float: left;
+    background-size: cover;
+  }
+
+
+  .blossoms {
+    background-image: url("trees.jpeg");
+
+    /* calls on svg filter set up in html to create water movement effect */
+    filter:url("#turbulence");
+
+    /*filter: blur(3px);
+    -webkit-filter: blur(3px);
+    */
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*
+  CREDITS:
+  - This video that provided code for the ripples and walked through importing libraries into your projects: https://www.youtube.com/watch?v=yKadTSaR1IQ
+
+  - GitHub link for the ripples!!!: https://github.com/sirxemic/jquery.ripples
+
+  - Code for bg image blur that ended up not using but was in past version: https://www.w3schools.com/howto/howto_css_blurred_background.asp
+
+  - Tutorial for html and css to creating filter for watermovement effect: https://www.youtube.com/watch?v=q-i0rZBZvBk 
+
+  - Article describing water movement and other textures created via svg filter effects (which are v cool): https://tympanus.net/codrops/2019/02/19/svg-filter-effects-creating-texture-with-feturbulence/
+  */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0'>"
+  
+  <title>
+  </title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="blossoms">
+  </section>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+  </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery.ripples@0.6.3/dist/jquery.ripples.min.js">
+  </script>
+
+  <script src="sound-effects.js"></script>
+
+  <script src="background-changer.js"></script>
+  
+  <script src="main.js">
+  </script>
+
+<script src="scroll.js">
+  </script>
+
+  <div class="blossoms">
+  </div>
+
+  <svg>
+    <filter id="turbulence" x="0" y="0" width="100%" height="100%">
+
+    <feTurbulence id="w-filter" numOctaves="3" seed="2" baseFrequency="0.02 0.05">
+    </feTurbulence>
+
+    <feDisplacementMap scale="6" in="SourceGraphic">
+    </feDisplacementMap>
+
+    <animate xlink:href="#w-filter" attributeName="baseFrequency" dur="80s"
+    keyTimes="0;0.5;1" values="0.02 0.06;0.04 0.08;0.0" repeatCount="indefinite">
+    </animate>
+  </filter>
+  </svg>
+  
+</body>
+
+</html>
